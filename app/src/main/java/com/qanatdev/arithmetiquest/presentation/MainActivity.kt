@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         launchWelcomeActivity()
+        launchSelectDifficultyFragment()
     }
 
     private fun launchWelcomeActivity(){
@@ -24,6 +25,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, WelcomeActivity::class.java))
         }
     }
+
+
+    private fun launchSelectDifficultyFragment(){
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.main_container, SelectDifficultyFragment.newInstance())
+            .addToBackStack(SelectDifficultyFragment.NAME)
+            .commit()
+    }
+
 
     companion object{
         private val PREFS_NAME = "MyPrefsFile"
