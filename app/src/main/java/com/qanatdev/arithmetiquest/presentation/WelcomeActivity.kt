@@ -10,11 +10,13 @@ import com.qanatdev.arithmetiquest.databinding.ActivityWelcomeBinding
 class WelcomeActivity : AppCompatActivity() {
 
 
-    private lateinit var binding: ActivityWelcomeBinding
+    private var _binding: ActivityWelcomeBinding? = null
+    private val binding: ActivityWelcomeBinding
+        get() = _binding ?: throw RuntimeException("ActivityWelcomeBinding == null")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityWelcomeBinding.inflate(layoutInflater)
+        _binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val prefs: SharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         binding.buttonStart.setOnClickListener {
@@ -23,6 +25,11 @@ class WelcomeActivity : AppCompatActivity() {
             editor.apply()
             finish()
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
     companion object{
