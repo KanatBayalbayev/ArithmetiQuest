@@ -1,27 +1,27 @@
 package com.qanatdev.arithmetiquest.presentation
 
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.qanatdev.arithmetiquest.R
+import com.qanatdev.arithmetiquest.databinding.ActivityWelcomeBinding
+
+class WelcomeActivity : AppCompatActivity() {
 
 
-class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityWelcomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        launchWelcomeActivity()
-    }
-
-    private fun launchWelcomeActivity(){
+        binding = ActivityWelcomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         val prefs: SharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        val firstRun: Boolean = prefs.getBoolean(KEY_FIRST_RUN, true)
-
-        if (firstRun) {
-            startActivity(Intent(this, WelcomeActivity::class.java))
+        binding.buttonStart.setOnClickListener {
+            val editor: SharedPreferences.Editor = prefs.edit()
+            editor.putBoolean(KEY_FIRST_RUN, false)
+            editor.apply()
+            finish()
         }
     }
 
