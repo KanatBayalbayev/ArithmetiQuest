@@ -1,7 +1,8 @@
-package com.qanatdev.arithmetiquest
+package com.qanatdev.arithmetiquest.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.qanatdev.arithmetiquest.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
