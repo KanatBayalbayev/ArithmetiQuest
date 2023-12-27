@@ -22,10 +22,17 @@
         <action
             android:id="@+id/action_gameFragment_to_gameCompletedFragment"
             app:destination="@id/gameCompletedFragment" />
+        <argument
+            android:name="level"
+            app:argType="com.qanatdev.arithmetiquest.domain.entities.Level" />
     </fragment>
     <fragment
         android:id="@+id/gameCompletedFragment"
         android:name="com.qanatdev.arithmetiquest.presentation.GameCompletedFragment"
         android:label="fragment_game_completed"
-        tools:layout="@layout/fragment_game_completed" />
+        tools:layout="@layout/fragment_game_completed" >
+        <argument
+            android:name="outcome"
+            app:argType="com.qanatdev.arithmetiquest.domain.entities.Outcome" />
+    </fragment>
 </navigation>

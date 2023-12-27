@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.qanatdev.arithmetiquest.R
 import com.qanatdev.arithmetiquest.databinding.FragmentGameBinding
 import com.qanatdev.arithmetiquest.databinding.FragmentGameCompletedBinding
@@ -23,8 +24,10 @@ class GameFragment : Fragment() {
 
     private lateinit var level: Level
 
+    private val args by navArgs<GameFragmentArgs>()
+
     private val viewModelFactory by lazy {
-        MainViewModelFactory(level, requireActivity().application)
+        MainViewModelFactory(args.level, requireActivity().application)
     }
     private val viewModel by lazy {
         ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
@@ -45,10 +48,10 @@ class GameFragment : Fragment() {
         }
 }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        parseArgs()
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        parseArgs()
+//    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -113,21 +116,23 @@ class GameFragment : Fragment() {
         return ContextCompat.getColor(requireContext(), colorResId)
     }
 
-    private fun parseArgs() {
-        level = requireArguments().getSerializable(KEY_LEVEL) as Level
-    }
+//    private fun parseArgs() {
+//        level = requireArguments().getSerializable(KEY_LEVEL) as Level
+//    }
 
     private fun launchGameFinishedFragment(outcome: Outcome) {
 //        requireActivity().supportFragmentManager.beginTransaction()
 //            .replace(R.id.main_container, GameCompletedFragment.newInstance(outcome))
 //            .addToBackStack(null)
 //            .commit()
-        val args = Bundle().apply {
-            putSerializable(GameCompletedFragment.KEY_GAME_RESULT, outcome)
-        }
+//        val args = Bundle().apply {
+//            putSerializable(GameCompletedFragment.KEY_GAME_RESULT, outcome)
+//        }
+//        findNavController().navigate(
+//
+//        )
         findNavController().navigate(
-            R.id.action_gameFragment_to_gameCompletedFragment,
-            args
+            GameFragmentDirections.actionGameFragmentToGameCompletedFragment(outcome)
         )
     }
 
