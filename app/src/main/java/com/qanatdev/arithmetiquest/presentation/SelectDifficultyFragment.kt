@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.qanatdev.arithmetiquest.R
-import com.qanatdev.arithmetiquest.databinding.FragmentGameBinding
 import com.qanatdev.arithmetiquest.databinding.FragmentSelectDifficultyBinding
 import com.qanatdev.arithmetiquest.domain.entities.Level
 
@@ -40,13 +40,22 @@ class SelectDifficultyFragment : Fragment() {
                 launchGameFragment(Level.HARD)
             }
         }
+
     }
 
     private fun launchGameFragment(level: Level) {
-        requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, GameFragment.newInstance(level))
-            .addToBackStack(GameFragment.NAME)
-            .commit()
+//        val navHostFragment = requireActivity().supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment
+//        val navController = navHostFragment.navController
+        val args = Bundle().apply {
+            putSerializable(GameFragment.KEY_LEVEL, level)
+        }
+//        navController.navigate(R.id.action_selectDifficultyFragment_to_gameFragment, arguments)
+
+
+        findNavController().navigate(
+            R.id.action_selectDifficultyFragment_to_gameFragment,
+            args
+        )
     }
 
 

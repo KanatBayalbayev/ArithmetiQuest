@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.navigation.fragment.findNavController
 import com.qanatdev.arithmetiquest.R
 import com.qanatdev.arithmetiquest.databinding.ActivityWelcomeBinding
 import com.qanatdev.arithmetiquest.databinding.FragmentGameCompletedBinding
@@ -101,10 +102,11 @@ class GameCompletedFragment : Fragment() {
     }
 
     private fun retryGame() {
-        requireActivity().supportFragmentManager.popBackStack(
-            GameFragment.NAME,
-            FragmentManager.POP_BACK_STACK_INCLUSIVE
-        )
+//        requireActivity().supportFragmentManager.popBackStack(
+//            GameFragment.NAME,
+//            FragmentManager.POP_BACK_STACK_INCLUSIVE
+//        )
+        findNavController().popBackStack(R.id.gameFragment,true)
     }
 
     override fun onDestroy() {
@@ -114,7 +116,7 @@ class GameCompletedFragment : Fragment() {
 
     companion object {
 
-        private const val KEY_GAME_RESULT = "outcome"
+         const val KEY_GAME_RESULT = "outcome"
 
         fun newInstance(outcome: Outcome): GameCompletedFragment {
             return GameCompletedFragment().apply {

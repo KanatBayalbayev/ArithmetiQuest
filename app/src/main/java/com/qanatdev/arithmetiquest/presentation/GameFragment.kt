@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.qanatdev.arithmetiquest.R
 import com.qanatdev.arithmetiquest.databinding.FragmentGameBinding
 import com.qanatdev.arithmetiquest.databinding.FragmentGameCompletedBinding
@@ -117,10 +118,17 @@ class GameFragment : Fragment() {
     }
 
     private fun launchGameFinishedFragment(outcome: Outcome) {
-        requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, GameCompletedFragment.newInstance(outcome))
-            .addToBackStack(null)
-            .commit()
+//        requireActivity().supportFragmentManager.beginTransaction()
+//            .replace(R.id.main_container, GameCompletedFragment.newInstance(outcome))
+//            .addToBackStack(null)
+//            .commit()
+        val args = Bundle().apply {
+            putSerializable(GameCompletedFragment.KEY_GAME_RESULT, outcome)
+        }
+        findNavController().navigate(
+            R.id.action_gameFragment_to_gameCompletedFragment,
+            args
+        )
     }
 
     override fun onDestroy() {
@@ -131,7 +139,7 @@ class GameFragment : Fragment() {
     companion object {
 
         const val NAME = "GameFragment"
-        private const val KEY_LEVEL = "level"
+        const val KEY_LEVEL = "level"
 
         fun newInstance(level: Level): GameFragment {
             return GameFragment().apply {
