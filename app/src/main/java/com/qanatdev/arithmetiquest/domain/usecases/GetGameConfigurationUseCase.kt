@@ -1,14 +1,14 @@
-package ru.sumin.composition.domain.usecases
+package com.qanatdev.arithmetiquest.domain.usecases
 
-import ru.sumin.composition.domain.entity.GameSettings
-import ru.sumin.composition.domain.entity.Level
-import ru.sumin.composition.domain.repository.GameRepository
+import com.qanatdev.arithmetiquest.domain.entities.GameConfiguration
+import com.qanatdev.arithmetiquest.domain.entities.Level
+import com.qanatdev.arithmetiquest.domain.repo.GameRepository
 
 class GetGameConfigurationUseCase(
     private val repository: GameRepository
 ) {
 
-    operator fun invoke(level: Level): GameSettings {
+    operator fun invoke(level: Level): GameConfiguration {
         return repository.getGameSettings(level)
     }
 }
