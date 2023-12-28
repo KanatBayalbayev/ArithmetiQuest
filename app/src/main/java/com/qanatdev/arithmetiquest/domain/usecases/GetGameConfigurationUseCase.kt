@@ -3,8 +3,9 @@ package com.qanatdev.arithmetiquest.domain.usecases
 import com.qanatdev.arithmetiquest.domain.entities.GameConfiguration
 import com.qanatdev.arithmetiquest.domain.entities.Level
 import com.qanatdev.arithmetiquest.domain.repo.GameRepository
+import javax.inject.Inject
 
-class GetGameConfigurationUseCase(
+class GetGameConfigurationUseCase (
     private val repository: GameRepository
 ) {
 
