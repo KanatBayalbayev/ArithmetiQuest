@@ -6,11 +6,21 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".presentation.WelcomeActivity">
+
+        <View
+            android:id="@+id/overlayView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:clickable="false"
+            android:visibility="gone"
+            tools:visibility="visible" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/welcomeLogo"
@@ -73,20 +83,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonStart" />
 
-        <View
-            android:id="@+id/overlayView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#80000000"
-            android:clickable="false"
-            android:visibility="gone"
-            tools:visibility="visible" />
 
 
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/howToPlayDialogWindow"
-            android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -95,100 +96,131 @@
             android:layout_marginBottom="60dp"
             android:background="@drawable/rounded_background_how_to_play_dialog"
             android:orientation="vertical"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="50dp"
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/howToPlayLogo"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/howtoplaylogo"
+                app:lottie_speed="1" />
+
+            <ImageView
+                android:id="@+id/buttonToCloseDialog"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/closeicon"
+                android:contentDescription="@string/buttontoclosedialog"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/howToPlayLogo"
-                    android:layout_width="250dp"
-                    android:layout_height="250dp"
-                    app:lottie_autoPlay="true"
-                    app:lottie_loop="true"
-                    app:lottie_rawRes="@raw/howtoplaylogo"
-                    app:lottie_speed="1" />
-
-                <ImageView
-                    android:id="@+id/buttonToCloseDialog"
-                    android:background="@drawable/closeicon"
-                    android:layout_marginStart="10dp"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:contentDescription="@string/buttontoclosedialog" />
-
-            </LinearLayout>
-
-
-
-
-
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:layout_height="300dp"
+                app:layout_constraintTop_toBottomOf="@+id/howToPlayLogo">
 
                 <LinearLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white">
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#009d90"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="@string/games_rules_title"
-                        android:textColor="@color/white" />
 
-                    <TextView
-                        android:padding="10dp"
-                        android:textColor="@color/white"
-                        android:background="#f77e1b"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/game_rules" />
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#009d90"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/goal_title"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#f77e1b"
+                            android:padding="10dp"
+                            android:fontFamily="casual"
+                            android:text="@string/goal"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#009d90"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/games_rules_title"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#f77e1b"
+                            android:padding="10dp"
+                            android:fontFamily="casual"
+                            android:text="@string/game_rule"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_background_example_container">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#009d90"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/example_title"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_background_example"
+                            android:padding="10dp"
+                            android:fontFamily="casual"
+                            android:text="@string/example"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_background_example_container">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#009d90"
-                        android:padding="10dp"
-                        android:paddingStart="25dp"
-                        android:paddingEnd="23dp"
-                        android:gravity="center"
-                        android:text="@string/example_title"
-                        android:textColor="@color/white" />
-
-                    <TextView
-                        android:padding="10dp"
-                        android:textColor="@color/white"
-                        android:background="@drawable/rounded_background_example"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/example" />
-
-                </LinearLayout>
+            </ScrollView>
 
 
-            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

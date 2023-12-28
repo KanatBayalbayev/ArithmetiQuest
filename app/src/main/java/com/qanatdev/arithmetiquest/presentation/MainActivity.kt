@@ -58,5 +58,9 @@ class MainActivity : AppCompatActivity() {
     companion object{
         private val PREFS_NAME = "MyPrefsFile"
         private val KEY_FIRST_RUN = "firstRun"
+
+        fun newInstance(context: Context): Intent{
+            return Intent(context, MainActivity::class.java)
+        }
     }
 }

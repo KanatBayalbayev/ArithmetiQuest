@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.qanatdev.arithmetiquest.R
@@ -27,9 +28,6 @@ class SelectDifficultyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
-            buttonLevelTest.setOnClickListener {
-                launchGameFragment(Level.TEST)
-            }
             buttonLevelEasy.setOnClickListener {
                 launchGameFragment(Level.EASY)
             }

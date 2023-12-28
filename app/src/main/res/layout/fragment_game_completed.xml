@@ -27,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:fontFamily="casual"
         android:text="@string/required_score"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@id/tv_score_answers"
@@ -39,6 +40,7 @@
     <TextView
         android:id="@+id/tv_score_answers"
         android:layout_width="0dp"
+        android:fontFamily="casual"
         android:layout_height="wrap_content"
         android:text="@string/score_answers"
         android:textSize="18sp"
@@ -53,6 +55,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="casual"
         android:text="@string/required_percentage"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@id/tv_score_percentage"
@@ -67,6 +70,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="casual"
         android:text="@string/score_percentage"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,12 +79,22 @@
         app:layout_constraintTop_toBottomOf="@id/tv_required_percentage"
         />
 
+
     <Button
         android:id="@+id/buttonRetry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="50dp"
+        android:backgroundTint="#9c73f7"
+        android:fontFamily="sans-serif-black"
         android:text="@string/retry"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
