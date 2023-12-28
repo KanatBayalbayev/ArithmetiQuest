@@ -1,15 +1,14 @@
 <resources>
-    <string name="app_name">JetpackStart</string>
+    <string name="app_name">ArithmetiQuest</string>
     <string name="question_mark">\?</string>
-    <string name="welcome_title">Состав числа</string>
-    <string name="game_rules">
-        Правила игры: перед вами будет три фигуры, две снизу и одна сверху, в двух из них будут
-        числа. Необходимо, чтобы сумма чисел из двух нижних фигур была равна числу в верхней фигуре,
-        для этого нужно вставить недостающее число.\n\nПример: в верхнем круге число 7, в одном
-        из нижних знак вопроса, а в другом число 4. Значит на месте вопросительного знака должно
-        быть число 3, потому что 3 + 4 = 7
+    <string name="welcome_title">ArithmetiQuest</string>
+    <string name="howToPlay_title">How to Play</string>
+    <string name="game_rules">Three figures are presented, two at the bottom and one at the top. Two of them contain numbers. The objective is to insert the missing number to ensure that the sum of the numbers in the two bottom figures equals the number in the top figure
     </string>
-    <string name="button_understand">Понятно</string>
+    <string name="example">In the top circle, there is the number 10, and in one of the bottom circles, there is a question mark, while in the other, there is the number 3. Therefore, the missing number represented by the question mark should be 7, as 3 + 7 equals 10.
+    </string>
+    <string name="button_understand">PLAY</string>
+    <string name="button_how_to_play">How to Play</string>
     <string name="welcome_logo">Welcome logo</string>
     <string name="choose_level_title">Выберите уровень:</string>
     <string name="easy_level">Легкий</string>
@@ -24,4 +23,7 @@
     <string name="required_percentage">Необходимый процент правильных ответов: %s</string>
     <string name="required_score">Необходимое количество правильных ответов: %s</string>
     <string name="progress_answers">Правильных ответов %s (минимум %s)</string>
+    <string name="games_rules_title">Games Rules</string>
+    <string name="example_title">Example</string>
+    <string name="buttontoclosedialog">buttonToCloseDialog</string>
 </resources>

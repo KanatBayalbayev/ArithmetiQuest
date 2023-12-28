@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.qanatdev.arithmetiquest.R
 import com.qanatdev.arithmetiquest.databinding.ActivityWelcomeBinding
 
@@ -18,12 +19,24 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val prefs: SharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        binding.buttonStart.setOnClickListener {
-            val editor: SharedPreferences.Editor = prefs.edit()
-            editor.putBoolean(KEY_FIRST_RUN, false)
-            editor.apply()
-            finish()
+//        val prefs: SharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+//        binding.buttonStart.setOnClickListener {
+//            val editor: SharedPreferences.Editor = prefs.edit()
+//            editor.putBoolean(KEY_FIRST_RUN, false)
+//            editor.apply()
+//            finish()
+//        }
+        binding.buttonHowToPlay.setOnClickListener {
+            binding.overlayView.visibility = View.VISIBLE
+            binding.howToPlayDialogWindow.visibility = View.VISIBLE
+        }
+        binding.buttonToCloseDialog.setOnClickListener {
+            binding.overlayView.visibility = View.GONE
+            binding.howToPlayDialogWindow.visibility = View.GONE
+        }
+        binding.overlayView.setOnClickListener {
+            binding.overlayView.visibility = View.GONE
+            binding.howToPlayDialogWindow.visibility = View.GONE
         }
     }
 
