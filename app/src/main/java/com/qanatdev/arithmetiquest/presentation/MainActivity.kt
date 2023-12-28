@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
         launchWelcomeActivity()
 //        launchSelectDifficultyFragment()
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment
-        val navController = navHostFragment.navController
-
-        navController.navigate(R.id.selectDifficultyFragment)
+//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment
+//        val navController = navHostFragment.navController
+//
+//        navController.navigate(R.id.selectDifficultyFragment)
 
 //        navController= Navigation.findNavController(this,R.id.main_container)
 //        NavigationUI.setupActionBarWithNavController(this,navController)
@@ -45,14 +45,14 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun launchSelectDifficultyFragment(){
-
-
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, SelectDifficultyFragment.newInstance())
-            .addToBackStack(SelectDifficultyFragment.NAME)
-            .commit()
-    }
+//    private fun launchSelectDifficultyFragment(){
+//
+//
+//        supportFragmentManager.beginTransaction()
+//            .replace(R.id.main_container, SelectDifficultyFragment.newInstance())
+//            .addToBackStack(SelectDifficultyFragment.NAME)
+//            .commit()
+//    }
 
 
     companion object{

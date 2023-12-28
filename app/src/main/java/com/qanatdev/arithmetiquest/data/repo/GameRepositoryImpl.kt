@@ -4,6 +4,7 @@ import com.qanatdev.arithmetiquest.domain.entities.GameConfiguration
 import com.qanatdev.arithmetiquest.domain.entities.Level
 import com.qanatdev.arithmetiquest.domain.entities.Question
 import com.qanatdev.arithmetiquest.domain.repo.GameRepository
+import javax.inject.Inject
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.random.Random
@@ -37,6 +38,7 @@ object GameRepositoryImpl : GameRepository {
                     8
                 )
             }
+
             Level.EASY -> {
                 GameConfiguration(
                     10,
@@ -45,6 +47,7 @@ object GameRepositoryImpl : GameRepository {
                     60
                 )
             }
+
             Level.NORMAL -> {
                 GameConfiguration(
                     20,
@@ -53,6 +56,7 @@ object GameRepositoryImpl : GameRepository {
                     40
                 )
             }
+
             Level.HARD -> {
                 GameConfiguration(
                     30,
@@ -63,4 +67,5 @@ object GameRepositoryImpl : GameRepository {
             }
         }
     }
+
 }

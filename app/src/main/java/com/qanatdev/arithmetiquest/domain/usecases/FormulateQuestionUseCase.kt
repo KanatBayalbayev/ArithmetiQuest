@@ -2,8 +2,9 @@ package com.qanatdev.arithmetiquest.domain.usecases
 
 import com.qanatdev.arithmetiquest.domain.entities.Question
 import com.qanatdev.arithmetiquest.domain.repo.GameRepository
+import javax.inject.Inject
 
-class FormulateQuestionUseCase(
+class FormulateQuestionUseCase (
     private val repository: GameRepository
 ) {
 
