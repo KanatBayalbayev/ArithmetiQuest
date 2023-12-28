@@ -1,18 +1,19 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs'
     id 'kotlin-kapt'
-    id 'kotlin-parcelize'
+
 }
 
 android {
     namespace 'com.qanatdev.arithmetiquest'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.qanatdev.arithmetiquest"
         minSdk 25
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -48,7 +49,10 @@ dependencies {
     kapt 'com.google.dagger:dagger-compiler:2.40.5'
     kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.5.0")
 
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.6'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.6'
 
+    kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.5.0")
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
