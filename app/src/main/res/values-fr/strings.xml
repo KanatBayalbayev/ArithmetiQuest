@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ArithmetiQuest</string>
+    <string name="question_mark">\?</string>
+    <string name="welcome_title">ArithmetiQuest</string>
+    <string name="howToPlay_title">Comment jouer</string>
+    <string name="game_rule">Trois figures sont présentées, deux en bas et une en haut. Deux d\'entre eux contiennent des chiffres. L\'objectif est d\'insérer le nombre manquant pour garantir que la somme des nombres des deux chiffres du bas est égale au nombre du chiffre du haut.</string>
+    <string name="goal">Améliorer la compréhension de la composition des nombres étudiés et développer la capacité de représenter les nombres comme la somme de deux additions grâce à des méthodes visuelles
+    </string>
+    <string name="example">Dans le cercle du haut, il y a le chiffre 10, et dans l\'un des cercles du bas, il y a un point d\'interrogation, tandis que dans l\'autre, il y a le chiffre 3. Par conséquent, le nombre manquant représenté par le point d\'interrogation devrait être 7, car 3 + 7 est égal à 10. Lors du calcul du résultat, le nombre de réponses correctes et le pourcentage de réponses correctes sont pris en compte. Le jeu a une limite de temps
+    </string>
+    <string name="button_understand">JOUER</string>
+    <string name="button_how_to_play">Comment jouer</string>
+    <string name="welcome_logo">Welcome logo</string>
+    <string name="choose_level_title">Sélectionnez un niveau</string>
+    <string name="easy_level">FACILE</string>
+    <string name="normal_level">MOYEN</string>
+    <string name="hard_level">DUR</string>
+    <string name="test_level">Тестовый</string>
+    <string name="game_over">Game Over</string>
+    <string name="score_answers">Ton score: %s</string>
+    <string name="score_percentage">Pourcentage de réponses correctes: %s</string>
+    <string name="retry">Rejouer</string>
+    <string name="right_answers">Réponses correctes %s sur %s requises</string>
+    <string name="required_percentage">Pourcentage requis de réponses correctes: %s</string>
+    <string name="required_score">Nombre requis de bonnes réponses %s</string>
+    <string name="progress_answers0">Correct answers 0 (minimum %s)</string>
+    <string name="progress_answers">Bonnes réponses %s (minimum %s)</string>
+    <string name="games_rules_title">Regles du jeu</string>
+    <string name="goal_title">But</string>
+    <string name="example_title">Exemple</string>
+    <string name="buttontoclosedialog">buttonToCloseDialog</string>
+</resources>

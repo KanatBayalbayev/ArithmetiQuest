@@ -21,9 +21,6 @@ import com.qanatdev.arithmetiquest.domain.entities.Outcome
 
 class GameFragment : Fragment() {
 
-
-    private lateinit var level: Level
-
     private val args by navArgs<GameFragmentArgs>()
 
     private val viewModelFactory by lazy {
@@ -48,10 +45,6 @@ class GameFragment : Fragment() {
         }
 }
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        parseArgs()
-//    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -64,7 +57,6 @@ class GameFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         observeViewModel()
         setClickListenersToOptions()
-        viewModel.startGame()
     }
 
     private fun setClickListenersToOptions() {
@@ -116,21 +108,8 @@ class GameFragment : Fragment() {
         return ContextCompat.getColor(requireContext(), colorResId)
     }
 
-//    private fun parseArgs() {
-//        level = requireArguments().getSerializable(KEY_LEVEL) as Level
-//    }
 
     private fun launchGameFinishedFragment(outcome: Outcome) {
-//        requireActivity().supportFragmentManager.beginTransaction()
-//            .replace(R.id.main_container, GameCompletedFragment.newInstance(outcome))
-//            .addToBackStack(null)
-//            .commit()
-//        val args = Bundle().apply {
-//            putSerializable(GameCompletedFragment.KEY_GAME_RESULT, outcome)
-//        }
-//        findNavController().navigate(
-//
-//        )
         findNavController().navigate(
             GameFragmentDirections.actionGameFragmentToGameCompletedFragment(outcome)
         )
@@ -139,19 +118,5 @@ class GameFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
-    }
-
-    companion object {
-
-        const val NAME = "GameFragment"
-        const val KEY_LEVEL = "level"
-
-        fun newInstance(level: Level): GameFragment {
-            return GameFragment().apply {
-                arguments = Bundle().apply {
-                    putSerializable(KEY_LEVEL, level)
-                }
-            }
-        }
     }
 }

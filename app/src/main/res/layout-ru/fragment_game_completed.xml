@@ -7,27 +7,12 @@
     android:background="@android:color/background_light"
     tools:context=".presentation.GameCompletedFragment">
 
-    <ImageView
-        android:id="@+id/emoji_result"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="48dp"
-        android:contentDescription="@string/game_over"
-        app:layout_constraintBottom_toTopOf="@id/tv_required_answers"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_smile"
-        />
-
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/wonEmoji"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="48dp"
         android:visibility="gone"
-        tools:visibility="gone"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         android:contentDescription="@string/game_over"

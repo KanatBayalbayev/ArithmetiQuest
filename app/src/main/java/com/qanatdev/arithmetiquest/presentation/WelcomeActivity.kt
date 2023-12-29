@@ -19,11 +19,27 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        openDialogHowToPlay()
+        closeDialogHowToPlay()
+        startGame()
+
+    }
+
+    private fun startGame(){
+        binding.buttonStart.setOnClickListener {
+            startActivity(MainActivity.newInstance(this))
+        }
+    }
+
+    private fun openDialogHowToPlay(){
         binding.buttonHowToPlay.setOnClickListener {
             binding.overlayView.visibility = View.VISIBLE
             binding.overlayView.isClickable = false
             binding.howToPlayDialogWindow.visibility = View.VISIBLE
         }
+    }
+
+    private fun closeDialogHowToPlay(){
         binding.buttonToCloseDialog.setOnClickListener {
             binding.overlayView.visibility = View.GONE
             binding.howToPlayDialogWindow.visibility = View.GONE
@@ -33,9 +49,6 @@ class WelcomeActivity : AppCompatActivity() {
             binding.overlayView.isClickable = true
             binding.howToPlayDialogWindow.visibility = View.GONE
         }
-        binding.buttonStart.setOnClickListener {
-            startActivity(MainActivity.newInstance(this))
-        }
     }
 
     override fun onDestroy() {
@@ -43,8 +56,4 @@ class WelcomeActivity : AppCompatActivity() {
         _binding = null
     }
 
-    companion object{
-        private val PREFS_NAME = "MyPrefsFile"
-        private val KEY_FIRST_RUN = "firstRun"
-    }
 }

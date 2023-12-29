@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">المغامرة الحسابية</string>
+    <string name="question_mark">\?</string>
+    <string name="welcome_title">المغامرة الحسابية</string>
+    <string name="howToPlay_title">كيف ألعب</string>
+    <string name="game_rule">يتم عرض ثلاثة أشكال، اثنان في الأسفل وواحد في الأعلى. اثنان منهم يحتويان على أرقام. الهدف هو إدخال الرقم المفقود للتأكد من أن مجموع الأرقام في الشكلين السفليين يساوي الرقم الموجود في الشكل العلوي</string>
+    <string name="goal">تعزيز فهم تركيب الأعداد المدروسة وتنمية القدرة على تمثيل الأعداد كمجموع مجموعين من خلال الطرق البصرية
+    </string>
+    <string name="example">في الدائرة العلوية يوجد الرقم 10، وفي إحدى الدوائر السفلية يوجد علامة استفهام، بينما في الدائرة الأخرى يوجد الرقم 3. لذلك، يجب أن يكون الرقم المفقود الذي تمثله علامة الاستفهام هو 7، حيث أن 3 + 7 يساوي 10. وعند حساب النتيجة يؤخذ في الاعتبار عدد الإجابات الصحيحة ونسبة الإجابات الصحيحة. اللعبة لديها حد زمني
+    </string>
+    <string name="button_understand">يلعب</string>
+    <string name="button_how_to_play">كيف ألعب</string>
+    <string name="welcome_logo">Welcome logo</string>
+    <string name="choose_level_title">حدد المستوى</string>
+    <string name="easy_level">سهل</string>
+    <string name="normal_level">واسطة</string>
+    <string name="hard_level">صعب</string>
+    <string name="test_level">Тестовый</string>
+    <string name="game_over">انتهت اللعبة</string>
+    <string name="score_answers">درجاتك: %s</string>
+    <string name="score_percentage">نسبة الإجابات الصحيحة: %s</string>
+    <string name="retry">العب مرة أخرى</string>
+    <string name="right_answers">الإجابات الصحيحة %s من %s جديد</string>
+    <string name="required_percentage">النسبة المطلوبة من الإجابات الصحيحة: %s</string>
+    <string name="required_score">العدد المطلوب من الإجابات الصحيحة %s</string>
+    <string name="progress_answers0">Correct answers 0 (minimum %s)</string>
+    <string name="progress_answers">الإجابات الصحيحة %s (الحد الأدنى %s)</string>
+    <string name="games_rules_title">قواعد الألعاب</string>
+    <string name="goal_title">غاية</string>
+    <string name="example_title">مثال</string>
+    <string name="buttontoclosedialog">buttonToCloseDialog</string>
+</resources>

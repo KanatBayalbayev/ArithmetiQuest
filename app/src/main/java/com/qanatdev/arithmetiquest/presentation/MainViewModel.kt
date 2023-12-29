@@ -2,9 +2,9 @@ package com.qanatdev.arithmetiquest.presentation
 
 import android.app.Application
 import android.os.CountDownTimer
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.qanatdev.arithmetiquest.R
 import com.qanatdev.arithmetiquest.data.repo.GameRepositoryImpl
 import com.qanatdev.arithmetiquest.domain.entities.GameConfiguration
@@ -16,15 +16,12 @@ import com.qanatdev.arithmetiquest.domain.usecases.GetGameConfigurationUseCase
 
 
 class MainViewModel(
-    application: Application,
+    private val application: Application,
     private val level: Level
-) : AndroidViewModel(application) {
-
+) : ViewModel() {
 
     private lateinit var gameSettings: GameConfiguration
 
-
-    private val context = application
     private val repository = GameRepositoryImpl
 
     private val generateQuestionUseCase = FormulateQuestionUseCase(repository)
@@ -67,10 +64,15 @@ class MainViewModel(
     private var countOfRightAnswers = 0
     private var countOfQuestions = 0
 
-    fun startGame() {
+    init {
+        startGame()
+    }
+
+    private fun startGame() {
         getGameSettings()
         startTimer()
         generateQuestion()
+        updateProgress()
     }
 
     fun chooseAnswer(number: Int) {
@@ -83,15 +85,18 @@ class MainViewModel(
         val percent = calculatePercentOfRightAnswers()
         _percentOfRightAnswers.value = percent
         _progressAnswers.value = String.format(
-            context.resources.getString(R.string.progress_answers),
+            application.resources.getString(R.string.progress_answers),
             countOfRightAnswers,
             gameSettings.minCountOfRightAnswers
         )
-        _enoughPercent.value = countOfRightAnswers >= gameSettings.minCountOfRightAnswers
+        _enoughCount.value = countOfRightAnswers >= gameSettings.minCountOfRightAnswers
         _enoughPercent.value = percent >= gameSettings.minPercentOfRightAnswers
     }
 
     private fun calculatePercentOfRightAnswers(): Int {
+        if (countOfQuestions == 0) {
+            return 0
+        }
         return ((countOfRightAnswers / countOfQuestions.toDouble()) * 100).toInt()
     }
 
