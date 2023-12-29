@@ -1,100 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
-    tools:context=".presentation.GameCompletedFragment"
-    >
+    tools:context=".presentation.GameCompletedFragment">
 
-    <ImageView
-        android:id="@+id/emoji_result"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/wonEmoji"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="48dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
         android:contentDescription="@string/game_over"
         app:layout_constraintBottom_toTopOf="@id/tv_required_answers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_smile"
-        />
+        app:lottie_rawRes="@raw/wongame" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lostEmoji"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="48dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:contentDescription="@string/game_over"
+        app:layout_constraintBottom_toTopOf="@id/tv_required_answers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_rawRes="@raw/lostgame" />
 
     <TextView
         android:id="@+id/tv_required_answers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:background="#009d90"
         android:fontFamily="casual"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="@string/required_score"
-        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/tv_score_answers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/tv_score_answers"
         android:layout_width="0dp"
-        android:fontFamily="casual"
         android:layout_height="wrap_content"
+        android:background="#009d90"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="@string/score_answers"
-        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/tv_required_percentage"
         app:layout_constraintEnd_toEndOf="@id/tv_required_answers"
         app:layout_constraintStart_toStartOf="@id/tv_required_answers"
-        app:layout_constraintTop_toBottomOf="@id/tv_required_answers"
-        />
+        app:layout_constraintTop_toBottomOf="@id/tv_required_answers" />
 
     <TextView
         android:id="@+id/tv_required_percentage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="#009d90"
         android:fontFamily="casual"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="@string/required_percentage"
-        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/tv_score_percentage"
         app:layout_constraintEnd_toEndOf="@id/tv_required_answers"
         app:layout_constraintStart_toStartOf="@id/tv_required_answers"
         app:layout_constraintTop_toBottomOf="@id/tv_score_answers"
-        app:layout_constraintVertical_chainStyle="packed"
-        />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/tv_score_percentage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="#009d90"
         android:fontFamily="casual"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="@string/score_percentage"
-        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/tv_required_answers"
         app:layout_constraintStart_toStartOf="@id/tv_required_answers"
-        app:layout_constraintTop_toBottomOf="@id/tv_required_percentage"
-        />
+        app:layout_constraintTop_toBottomOf="@id/tv_required_percentage" />
 
 
-    <Button
+    <TextView
         android:id="@+id/buttonRetry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
         android:layout_margin="50dp"
-        android:backgroundTint="#9c73f7"
+        android:background="@drawable/button_pressed"
         android:fontFamily="sans-serif-black"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:gravity="center"
         android:text="@string/retry"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

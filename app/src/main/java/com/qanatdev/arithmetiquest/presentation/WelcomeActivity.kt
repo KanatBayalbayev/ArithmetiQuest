@@ -21,6 +21,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.buttonHowToPlay.setOnClickListener {
             binding.overlayView.visibility = View.VISIBLE
+            binding.overlayView.isClickable = false
             binding.howToPlayDialogWindow.visibility = View.VISIBLE
         }
         binding.buttonToCloseDialog.setOnClickListener {
@@ -29,6 +30,7 @@ class WelcomeActivity : AppCompatActivity() {
         }
         binding.overlayView.setOnClickListener {
             binding.overlayView.visibility = View.GONE
+            binding.overlayView.isClickable = true
             binding.howToPlayDialogWindow.visibility = View.GONE
         }
         binding.buttonStart.setOnClickListener {

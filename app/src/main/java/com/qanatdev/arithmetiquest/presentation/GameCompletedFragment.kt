@@ -58,7 +58,7 @@ class GameCompletedFragment : Fragment() {
 
     private fun bindViews() {
         with(binding) {
-            emojiResult.setImageResource(getSmileResId())
+            getEmojiResult()
             tvRequiredAnswers.text = String.format(
                 getString(R.string.required_score),
                 args.outcome.gameConfiguration.minCountOfRightAnswers
@@ -78,11 +78,13 @@ class GameCompletedFragment : Fragment() {
         }
     }
 
-    private fun getSmileResId(): Int {
-        return if (args.outcome.winner) {
-            R.drawable.ic_smile
+    private fun getEmojiResult() {
+        if (args.outcome.winner) {
+            binding.wonEmoji.visibility = View.VISIBLE
+            binding.lostEmoji.visibility = View.GONE
         } else {
-            R.drawable.ic_sad
+            binding.lostEmoji.visibility = View.VISIBLE
+            binding.wonEmoji.visibility = View.GONE
         }
     }
 

@@ -22,7 +22,8 @@
     <string name="retry">Play Again</string>
     <string name="right_answers">Правильных ответов %s из %s необходимых</string>
     <string name="required_percentage">Required percentage of correct answers: %s</string>
-    <string name="required_score">Required number of correct answers: %s</string>
+    <string name="required_score">Required number of correct answers %s</string>
+    <string name="progress_answers0">Correct answers 0 (minimum %s)</string>
     <string name="progress_answers">Correct answers %s (minimum %s)</string>
     <string name="games_rules_title">Games Rules</string>
     <string name="goal_title">Purpose</string>
