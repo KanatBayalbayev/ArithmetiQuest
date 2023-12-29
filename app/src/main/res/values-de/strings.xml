@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ArithmetiQuest</string>
+    <string name="question_mark">\?</string>
+    <string name="welcome_title">ArithmetiQuest</string>
+    <string name="howToPlay_title">Spielanleitung</string>
+    <string name="game_rule">Es werden drei Figuren dargestellt, zwei unten und eine oben. Zwei davon enthalten Zahlen. Das Ziel besteht darin, die fehlende Zahl einzufügen, um sicherzustellen, dass die Summe der Zahlen in den beiden unteren Zahlen der Zahl in der oberen Zahl entspricht</string>
+    <string name="goal">Verbessern Sie das Verständnis für die Zusammensetzung der untersuchten Zahlen und entwickeln Sie die Fähigkeit, Zahlen durch visuelle Methoden als Summe zweier Summanden darzustellen
+    </string>
+    <string name="example">Im oberen Kreis befindet sich die Zahl 10 und in einem der unteren Kreise befindet sich ein Fragezeichen, während im anderen die Zahl 3 steht. Daher sollte die fehlende Zahl, die durch das Fragezeichen dargestellt wird, 7 sein. denn 3 + 7 ergibt 10. Bei der Berechnung des Ergebnisses werden die Anzahl der richtigen Antworten und der Prozentsatz der richtigen Antworten berücksichtigt. Das Spiel hat ein Zeitlimit
+    </string>
+    <string name="button_understand">SPIELEN</string>
+    <string name="button_how_to_play">Spielanleitung</string>
+    <string name="welcome_logo">Welcome logo</string>
+    <string name="choose_level_title">Wählen Sie eine Ebene aus</string>
+    <string name="easy_level">EINFACH</string>
+    <string name="normal_level">MITTEL</string>
+    <string name="hard_level">HART</string>
+    <string name="test_level">Тестовый</string>
+    <string name="game_over">Spiel vorbei</string>
+    <string name="score_answers">Ihr Ergebnis: %s</string>
+    <string name="score_percentage">Prozentsatz der richtigen Antworten %s</string>
+    <string name="retry">Nochmal abspielen</string>
+    <string name="right_answers">Übliche Kommentare %s von %s notwendig</string>
+    <string name="required_percentage">Erforderlicher Prozentsatz richtiger Antworten %s</string>
+    <string name="required_score">Erforderliche Anzahl richtiger Antworten %s</string>
+    <string name="progress_answers0">Correct answers 0 (minimum %s)</string>
+    <string name="progress_answers">Korrekte Antworten %s (minimum %s)</string>
+    <string name="games_rules_title">Spielregeln</string>
+    <string name="goal_title">Zweck</string>
+    <string name="example_title">Beispiel</string>
+    <string name="buttontoclosedialog">buttonToCloseDialog</string>
+</resources>

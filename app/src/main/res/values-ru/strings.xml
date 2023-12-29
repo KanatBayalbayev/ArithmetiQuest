@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Арифметический Квест</string>
+    <string name="question_mark">\?</string>
+    <string name="welcome_title">Арифметический Квест</string>
+    <string name="howToPlay_title">Как Играть</string>
+    <string name="game_rule">Представлены три фигуры: две внизу и одна вверху. В двух из них содержатся числа. Цель - вставить пропущенное число, чтобы сумма чисел в двух нижних фигурах равнялась числу в верхней фигуре</string>
+    <string name="goal">Углубить понимание структуры изучаемых чисел и развить навык представления чисел как суммы двух слагаемых с использованием визуальных методов
+    </string>
+    <string name="example">В верхнем круге находится число 10, а в одном из нижних кругов - вопросительный знак, в то время как в другом - число 3. Таким образом, пропущенное число, обозначенное вопросительным знаком, должно быть 7, поскольку 3 + 7 равно 10. При расчете результата учитывается количество правильных ответов и процент правильных ответов. В игре есть временное ограничение
+    </string>
+    <string name="button_understand">ИГРАТЬ</string>
+    <string name="button_how_to_play">Как Играть</string>
+    <string name="welcome_logo">Welcome logo</string>
+    <string name="choose_level_title">Выберете уровень</string>
+    <string name="easy_level">ЛЕГКИЙ</string>
+    <string name="normal_level">СРЕДНИЙ</string>
+    <string name="hard_level">ТЯЖЕЛЫЙ</string>
+    <string name="test_level">Тестовый</string>
+    <string name="game_over">Игра окончена</string>
+    <string name="score_answers">Ваш балл: %s</string>
+    <string name="score_percentage">Процент правильных ответов: %s</string>
+    <string name="retry">Играть Снова</string>
+    <string name="right_answers">Правильных ответов %s из %s необходимых</string>
+    <string name="required_percentage">Необходимый процент правильных ответов: %s</string>
+    <string name="required_score">Необходимое количество правильных ответов %s</string>
+    <string name="progress_answers0">Правильных ответов 0 (минимум %s)</string>
+    <string name="progress_answers">Правильных ответов %s (минимум %s)</string>
+    <string name="games_rules_title">Правила игры</string>
+    <string name="goal_title">Цель</string>
+    <string name="example_title">Пример</string>
+    <string name="buttontoclosedialog">buttonToCloseDialog</string>
+</resources>

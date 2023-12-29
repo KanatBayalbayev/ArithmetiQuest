@@ -42,18 +42,6 @@ class SelectDifficultyFragment : Fragment() {
     }
 
     private fun launchGameFragment(level: Level) {
-//        val navHostFragment = requireActivity().supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment
-//        val navController = navHostFragment.navController
-//        val args = Bundle().apply {
-//            putSerializable(GameFragment.KEY_LEVEL, level)
-//        }
-//        navController.navigate(R.id.action_selectDifficultyFragment_to_gameFragment, arguments)
-
-
-//        findNavController().navigate(
-//            R.id.action_selectDifficultyFragment_to_gameFragment,
-//            args
-//        )
         findNavController().navigate(SelectDifficultyFragmentDirections.actionSelectDifficultyFragmentToGameFragment(level))
     }
 
@@ -63,10 +51,4 @@ class SelectDifficultyFragment : Fragment() {
         _binding = null
     }
 
-    companion object{
-        const val NAME = "SelectDifficultyFragment"
-        fun newInstance(): SelectDifficultyFragment{
-            return SelectDifficultyFragment()
-        }
-    }
 }
