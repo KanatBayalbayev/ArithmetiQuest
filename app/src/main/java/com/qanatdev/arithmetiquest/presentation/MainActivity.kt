@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        launchWelcomeActivity()
+//        launchWelcomeActivity()
 //        launchSelectDifficultyFragment()
 
 //        val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment
@@ -58,5 +58,9 @@ class MainActivity : AppCompatActivity() {
     companion object{
         private val PREFS_NAME = "MyPrefsFile"
         private val KEY_FIRST_RUN = "firstRun"
+
+        fun newInstance(context: Context): Intent{
+            return Intent(context, MainActivity::class.java)
+        }
     }
 }
