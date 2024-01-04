@@ -1,4 +1,3 @@
-![](https://github.com/KanatBayalbayev/ArithmetiQuest/blob/5b223d517206981c587b610add4e1d01c51a6617/app/src/main/res/assets/videoanim.gif)
 
 <img src="https://github.com/KanatBayalbayev/ArithmetiQuest/assets/115481348/f1c4043d-3926-4dc1-9328-441c71fac27a" width="410" height="700">
 <img src="https://github.com/KanatBayalbayev/ArithmetiQuest/assets/115481348/12c81ac6-6245-4960-9ceb-c3859b36e5eb" width="410" height="700">
