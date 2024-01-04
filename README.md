@@ -1,3 +1,4 @@
+
 <img src="https://github.com/KanatBayalbayev/ArithmetiQuest/assets/115481348/f1c4043d-3926-4dc1-9328-441c71fac27a" width="410" height="700">
 <img src="https://github.com/KanatBayalbayev/ArithmetiQuest/assets/115481348/12c81ac6-6245-4960-9ceb-c3859b36e5eb" width="410" height="700">
 <img src="https://github.com/KanatBayalbayev/ArithmetiQuest/assets/115481348/be8e50be-2da6-4551-aafc-721e3b78a23d" width="410" height="700">
