@@ -1,4 +1,4 @@
-https://github.com/KanatBayalbayev/ArithmetiQuest/assets/115481348/e1d781c6-9c9f-4a2b-a7ee-4af7586b89fd
+
 
 
 <img src="https://github.com/KanatBayalbayev/ArithmetiQuest/assets/115481348/f1c4043d-3926-4dc1-9328-441c71fac27a" width="360" height="700">
