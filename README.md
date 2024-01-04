@@ -1,3 +1,6 @@
+![Screen_Recording_20240104_164009_ArithmetiQuest_1](https://github.com/KanatBayalbayev/ArithmetiQuest/assets/115481348/483e3de3-edec-4bd9-b169-6ba465d2a6e8)
+
+
 https://github.com/KanatBayalbayev/ArithmetiQuest/assets/115481348/a6ca8630-c256-49e7-9af7-4a8a8739c9aa
 
 
