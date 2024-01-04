@@ -1,3 +1,5 @@
+![XOsX](https://github.com/KanatBayalbayev/ArithmetiQuest/assets/115481348/07194c85-3c9b-4817-8787-16f741f14311)
+
 
 <img src="https://github.com/KanatBayalbayev/ArithmetiQuest/assets/115481348/f1c4043d-3926-4dc1-9328-441c71fac27a" width="410" height="700">
 <img src="https://github.com/KanatBayalbayev/ArithmetiQuest/assets/115481348/12c81ac6-6245-4960-9ceb-c3859b36e5eb" width="410" height="700">
